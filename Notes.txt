@@ -1,0 +1,18 @@
+Food Recipe Application
+
+1 Spponacular Api
+
+API Key: fd78c0d124be4e7696c40b6e611e7a2d
+
+Food recipes sites examples
+
+https://www.giallozafferano.it/
+https://www.simplyrecipes.com/
+https://www.allrecipes.com
+https://www.similarweb.com/top-sites/category/food-and-drink/cooking-and-recipes/
+
+
+https://api.spoonacular.com/recipes/random?apiKey=fd78c0d124be4e7696c40b6e611e7a2d
+
+
+header background: RGB(239, 238, 233)
