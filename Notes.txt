@@ -14,5 +14,19 @@ https://www.similarweb.com/top-sites/category/food-and-drink/cooking-and-recipes
 
 https://api.spoonacular.com/recipes/random?apiKey=fd78c0d124be4e7696c40b6e611e7a2d
 
+https://api.spoonacular.com/recipes/random?number=1&tags=vegetarian,dessert
 
 header background: RGB(239, 238, 233)
+
+
+https://www.spendwithpennies.com/wp-content/uploads/2020/12/Roasted-Sausage-and-Potatoes-SpendWithPennies-16-636x436.jpg
+https://www.spendwithpennies.com/wp-content/uploads/2013/08/SpendWithPennies-Salisbury-Steak-21.jpg
+https://www.spendwithpennies.com/wp-content/uploads/2014/01/Crock-Pot-Chicken-Tortilla-Soup-SpendWithPennies-2-350x525.jpg
+https://www.spendwithpennies.com/wp-content/uploads/2022/05/Air-Fryer-Bratwurst-SpendWithPennies-1-636x436.jpg
+https://www.spendwithpennies.com/wp-content/uploads/2021/10/Crispy-Popcorn-Shrimp-swp-SpendWithPennies-5-636x436.jpg
+
+Material UI carousel
+
+https://www.npmjs.com/package/react-material-ui-carousel
+
+Live Demo -> https://www.npmjs.com/package/react-material-ui-carousel
