@@ -6,6 +6,7 @@ import RecipeService from "../../Service/recipeService";
 import CarouselItem from "./CarouselItem";
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
+import { Link } from "react-router-dom";
 
 const CarouselRecipe = (props) => {
   const [carousel, setCarousel] = useState([]);
@@ -63,14 +64,15 @@ const CarouselRecipe = (props) => {
         {carousel?.map((item, index) => {
           return (
             <div key={index} className="carousel_item">
-              <img src={item?.recipe?.images?.REGULAR?.url} alt="" />
-              <h2>{item?.recipe?.label?.substring(0, 22)}</h2>
-              <Button className="CheckButton">Check it out</Button>
+              <Link>
+                <img src={item?.recipe?.images?.REGULAR?.url} alt="" />
+                <h2>{item?.recipe?.label?.substring(0, 22)}</h2>
+                <Button className="CheckButton">Check it out</Button>
+              </Link>
             </div>
           );
         })}
       </Carousel>
-      ;
     </div>
   );
 };
