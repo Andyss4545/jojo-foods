@@ -1,27 +1,32 @@
 import React, { useEffect, useState } from "react";
 import "../../Component/Rowrecipe/Rowrecipe.css";
 import { Search } from "@mui/icons-material";
-import RecipeService from "../../Service/recipeService.js";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import Loader from "../Loading/Loading";
+
+const key = `38399b056aab4dfe8ec523c2ae490b76`;
 
 const Rowrecipe = () => {
+  // set recipes to an empty objects of arrays
   const [recipes, setRecipes] = useState([]);
+  // set loading to false
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        // const Response = await fetch(
-        //   `https://api.spoonacular.com/recipes/random?apiKey=${base_Key}&number=9`
-        // )
-        // const data = await Response.json();
-        // setRecipes(data);
-        const Response = await RecipeService.RecipeList();
-        const data = await Response.data.hits;
-        setRecipes(data);
-        console.log(data);
+        setLoading(true); // set the loading to true
+        // fetch food data from spoonacular api
+        const Response = await fetch(
+          `https://api.spoonacular.com/recipes/random?apiKey=${key}&number=12`
+        );
+        const data = await Response.json(); //await the response
+        setRecipes(data.recipes); // setRecipes to the data.recipes
+        setLoading(false);
+        console.log("here is my spoon", data);
       } catch (error) {
-        setRecipes(error);
+        setLoading(false);
+        setRecipes(error); // if there is any error catch errror
       }
     };
 
@@ -38,23 +43,31 @@ const Rowrecipe = () => {
       </div>
 
       <div className="rowrecipe_recipes">
-        {Object.keys(recipes).length > 0 &&
+        {loading ? (
+          <div className="recipe_load">
+            <Loader />
+          </div>
+        ) : (
+          // Object.keys(recipes)?.length > 0 &&
           recipes?.map((recipe, index) => {
             return (
               <div key={index} className="recipe">
-                <Link>
-                  <img src={recipe?.recipe?.images?.REGULAR?.url} alt="" />
-                  <p className="recipe_title">
-                    {recipe?.recipe?.label?.substring(0, 22)}..
+                <Link to={`/recipe/${recipe?.id}`}>
+                  <img src={recipe?.image} alt="" />
+                  <p className="recipe_rowTitle">
+                    {recipe?.title?.substring(0, 22)}..
                   </p>
-                  <p className="recipe_type">{recipe?.recipe?.mealType[0]}</p>
+                  <p className="recipe_type">
+                    {recipe?.diets[0] || recipe?.diets[1]}
+                  </p>
                   <div className="recipe_buttons">
-                    <button className="recipe_btn">Quick View</button>
+                    <button className="recipe_btn">View Recipe</button>
                   </div>
                 </Link>
               </div>
             );
-          })}
+          })
+        )}
       </div>
     </div>
   );

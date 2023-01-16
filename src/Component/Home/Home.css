@@ -7,13 +7,14 @@
 }
 
 .home_row{
-    margin-top: 20px;
+    margin-top: 100px;
 }
 
 @media screen and (min-width:1190px){
     .home_row{
          width: 85%;
          margin: 0 auto;
+         margin-top: 100px;
     }
 }
 

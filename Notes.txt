@@ -30,3 +30,21 @@ Material UI carousel
 https://www.npmjs.com/package/react-material-ui-carousel
 
 Live Demo -> https://www.npmjs.com/package/react-material-ui-carousel
+
+Carousel 
+
+{carousel?.map((item, index) => {
+          return (
+            <div key={index} className="carousel_item">
+
+
+              {/* <Link>
+                <img src={item?.recipe?.images?.REGULAR?.url} alt="" />
+                <h2>{item?.recipe?.label?.substring(0, 22)}</h2>
+                <Button className="CheckButton">Check it out</Button>
+              </Link> */}
+
+              
+            </div>
+          );
+        })}
