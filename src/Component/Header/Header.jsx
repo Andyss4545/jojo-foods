@@ -17,7 +17,7 @@ const Header = () => {
           <Close className="header_closeIcon" />
         </div>
         <div className="header_logo">
-          <Link>
+          <Link to={"/"}>
             <img src={jojofood} alt="" />
           </Link>
         </div>

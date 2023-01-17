@@ -1,5 +1,11 @@
+.searched{
+     width: 85%;
+     margin: 0 auto; 
+     padding-top: 30px;
+}
 
-.rowrecipe_recipes {
+
+.searched_recipes {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -37,7 +43,7 @@
      margin-bottom: 10px;
 }
 
-.recipe_type{
+.searched_type{
     color: #ED2647;
     margin-bottom: 5px;
     font-size: 12px;
@@ -91,12 +97,14 @@
     transform: translateY(0);
 }
 
-.recipe_load{
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; */
+.searched_load{
     width: 100%;
     margin: 0 auto;
     text-align: center;
+}
+
+@media screen and (max-width: 1190px) {
+    .searched{
+        width: 100%;
+   }
 }

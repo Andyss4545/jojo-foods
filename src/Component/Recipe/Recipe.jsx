@@ -7,7 +7,7 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import AccessAlarmsIcon from "@mui/icons-material/AccessAlarms";
 import Loader from "../Loading/Loading";
 
-const key = `38399b056aab4dfe8ec523c2ae490b76`;
+const key = `ae154f11a0704b019fda192d726fdd27`;
 
 const Recipe = () => {
   // set the id of each array

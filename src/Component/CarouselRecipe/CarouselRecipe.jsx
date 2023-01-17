@@ -8,7 +8,7 @@ import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
 import { Link } from "react-router-dom";
 
-const key = `38399b056aab4dfe8ec523c2ae490b76`;
+const key = `ae154f11a0704b019fda192d726fdd27`;
 
 const CarouselRecipe = (props) => {
   // set carousel to empty objects with useState
@@ -55,7 +55,7 @@ const CarouselRecipe = (props) => {
       <Carousel
         swipeable={false}
         draggable={false}
-        showDots={true}
+        showDots={false}
         responsive={responsive}
         ssr={true} // means to render carousel on server-side.
         infinite={true}

@@ -4,7 +4,7 @@ import { Search } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import Loader from "../Loading/Loading";
 
-const key = `38399b056aab4dfe8ec523c2ae490b76`;
+const key = `ae154f11a0704b019fda192d726fdd27`;
 
 const Rowrecipe = () => {
   // set recipes to an empty objects of arrays
@@ -35,20 +35,13 @@ const Rowrecipe = () => {
 
   return (
     <div className="rowrecipe">
-      <div className="rowrecipe_search">
-        <div className="rowrecipe_input">
-          <input type="search" placeholder="Search recipes.." />
-          <Search />
-        </div>
-      </div>
-
       <div className="rowrecipe_recipes">
         {loading ? (
           <div className="recipe_load">
             <Loader />
           </div>
         ) : (
-          // Object.keys(recipes)?.length > 0 &&
+          Object.keys(recipes)?.length > 0 &&
           recipes?.map((recipe, index) => {
             return (
               <div key={index} className="recipe">
