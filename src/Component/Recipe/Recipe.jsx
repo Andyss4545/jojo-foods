@@ -7,11 +7,14 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import AccessAlarmsIcon from "@mui/icons-material/AccessAlarms";
 import Loader from "../Loading/Loading";
 import "animate.css";
+import { GlobaStateValue } from "../../Global-State/StateProvider";
 
 const key = `ae154f11a0704b019fda192d726fdd27`;
 
 const Recipe = () => {
-  // set the id of each array
+  const [{ favorite }, dispatch] = GlobaStateValue();
+  console.log("favorite", favorite);
+  // set the id of each recipe
   const { nameid } = useParams();
   // recipe in array
   const [recipe, setRecipe] = useState([]);
@@ -57,7 +60,12 @@ const Recipe = () => {
         <div className="recipe_headerLeft">
           <p className="recipe_title">{recipe?.title}</p>
 
-          <p className="recipe_save">
+          <p
+            onClick={() =>
+              dispatch({ type: "ADD_TO_FAVORITE", favorite: recipe })
+            }
+            className="recipe_save"
+          >
             <FavoriteIcon /> <span>Save To Favorite</span>
           </p>
           <img

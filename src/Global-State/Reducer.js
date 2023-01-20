@@ -1,8 +1,6 @@
 export const initialState ={
      favorite : [
-          {
-
-          }
+        
      ],
 
      user : null
@@ -12,8 +10,21 @@ export const initialState ={
 const reducer = (state, action) => {
        //Big switch which takes action and have  property call type
        switch(action.type) {
-             case 'ADD T0 FAVORITE':
+             case 'ADD_TO_FAVORITE':
 
+             return {
+                  ...state,
+                  favorite: action.favorite
+             }
+
+
+             case 'SET_USER':
+
+             return {
+                  ...state,
+                  user: action.user
+             }
+             
 
              default: return state
        }

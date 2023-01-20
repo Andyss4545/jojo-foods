@@ -178,6 +178,7 @@
 
     .recipe_save{
         margin-left: 0px;
+        cursor: pointer;
     }
 }
 

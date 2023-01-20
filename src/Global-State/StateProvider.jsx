@@ -5,8 +5,8 @@ import { useContext, useReducer, createContext } from "react";
 export const StateContext = createContext();
 
 // here is our entire provider
-export const StateProvider = ({ initialState, reducer, children }) => (
-  <StateContext.Provider value={useReducer(initialState, reducer)}>
+export const StateProvider = ({ reducer, initialState, children }) => (
+  <StateContext.Provider value={useReducer(reducer, initialState)}>
     {children} {/*this is the entire app, e.g App.js */}
   </StateContext.Provider>
 );
