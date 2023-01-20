@@ -6,6 +6,7 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import AccessAlarmsIcon from "@mui/icons-material/AccessAlarms";
 import Loader from "../Loading/Loading";
+import "animate.css";
 
 const key = `ae154f11a0704b019fda192d726fdd27`;
 
@@ -59,7 +60,11 @@ const Recipe = () => {
           <p className="recipe_save">
             <FavoriteIcon /> <span>Save To Favorite</span>
           </p>
-          <img className="recipe_img" src={recipe?.image} alt="" />
+          <img
+            className="recipe_img animate__animated animate__fadeInDown"
+            src={recipe?.image}
+            alt=""
+          />
 
           <div className="recipe_info">
             <div className="recipe_infoItem">
@@ -117,13 +122,16 @@ const Recipe = () => {
           <div className="recipe_description">
             {/** if activeTab === description show <p> tag */}
             {activeTab === "description" && (
-              <p dangerouslySetInnerHTML={{ __html: recipe?.summary }}></p>
+              <p
+                className="animate__animated animate__fadeIn"
+                dangerouslySetInnerHTML={{ __html: recipe?.summary }}
+              ></p>
             )}
 
             {/** if activeTab === description show <p> tag */}
             {activeTab === "instruction" && (
               <p
-                className="recipe_instruction"
+                className="recipe_instruction animate__animated animate__fadeIn"
                 dangerouslySetInnerHTML={{ __html: recipe?.instructions }}
               ></p>
             )}
@@ -131,7 +139,7 @@ const Recipe = () => {
         </div>
       </div>
 
-      <div className="recipe_ingredients">
+      <div className="recipe_ingredients animate__animated animate__fadeInLeft">
         <p className="ingredient_title">Ingredients:</p>
         <ul>
           {recipe?.extendedIngredients?.map((ingredient) => {

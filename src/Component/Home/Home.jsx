@@ -10,12 +10,12 @@ const Home = () => {
   return (
     <div clasName="home">
       {/* <Hero /> */}
-      <div className="home_carousel">
+      <div className="home_carousel animate__animated animate__bounceIn">
         <CarouselRecipe />
       </div>
 
       <div className="home_search">
-           <Search/>
+        <Search />
       </div>
 
       <div className="home_row">

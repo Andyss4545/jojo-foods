@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Header/Header.css";
 import { Link } from "react-router-dom";
 import jojofood from "../../Assets/jojofoodslogo.png";
@@ -7,14 +7,32 @@ import SearchIcon from "@mui/icons-material/Search";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import PersonIcon from "@mui/icons-material/Person";
 import { Close } from "@mui/icons-material";
+import Search from "../Search/Search";
+import "animate.css";
 
 const Header = () => {
+  // set mobile nav to false
+  const [navbar, setNavbar] = useState(false);
+
+  // set searchbar to false
+
+  const [searchbar, setSearchBar] = useState(false);
+
   return (
     <div className="header">
       <div className="header_container">
         <div className="header_hamburger">
-          <MenuIcon className="header_hamIcon" />
-          <Close className="header_closeIcon" />
+          {navbar ? (
+            <Close
+              onClick={() => setNavbar(!navbar)}
+              className="header_closeIcon"
+            />
+          ) : (
+            <MenuIcon
+              onClick={() => setNavbar(!navbar)}
+              className="header_hamIcon"
+            />
+          )}
         </div>
         <div className="header_logo">
           <Link to={"/"}>
@@ -23,7 +41,13 @@ const Header = () => {
         </div>
 
         <div className="header_menu">
-          <nav>
+          <nav
+            className={
+              navbar
+                ? "header_nav active animate__animated animate__fadeInDown"
+                : "header_nav"
+            }
+          >
             <ul>
               <li>
                 <Link>Home</Link>
@@ -47,9 +71,31 @@ const Header = () => {
           </nav>
 
           <div className="header_icons">
-            <SearchIcon className="header_search" />
+            <SearchIcon
+              onClick={() => setSearchBar(!searchbar)}
+              className="header_search"
+            />
             <FavoriteIcon className="header_favorite" />
-            <PersonIcon className="header_person" />
+            {/* <PersonIcon className="header_person" /> */}
+
+            <div
+              className={
+                searchbar
+                  ? "header_searchComponent active animate__animated animate__fadeIn"
+                  : "header_searchComponent"
+              }
+            >
+              <div className="header_searchClose">
+                <Close
+                  onClick={() => setSearchBar(!searchbar)}
+                  className="header_closeSearch"
+                />
+              </div>
+
+              <div className="header_component">
+                <Search />
+              </div>
+            </div>
           </div>
         </div>
       </div>
