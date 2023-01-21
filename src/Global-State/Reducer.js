@@ -12,9 +12,14 @@ const reducer = (state, action) => {
        switch(action.type) {
              case 'ADD_TO_FAVORITE':
 
-             return {
-                  ...state,
-                  favorite: action.favorite
+             const tempfavorite = state.favorite.filter((item) => action.favorite.id === item.id)
+             if (tempfavorite.length > 0) {
+                 return state
+             } else {
+               return {
+                    ...state,
+                    favorite: action.favorite
+               }
              }
 
 
