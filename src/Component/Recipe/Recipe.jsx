@@ -51,8 +51,15 @@ const Recipe = () => {
   }, []);
 
   // add to favorite function
+
   let addtoFavorite = (name) => {
-    dispatch({ type: "ADD_TO_FAVORITE", favorite: `${name}` });
+    dispatch({
+      type: "ADD_TO_FAVORITE",
+      favorite: window.localStorage.setItem(
+        "ADD_TO_FAVORITE",
+        JSON.stringify(`${name}`)
+      ),
+    });
   };
 
   return loading ? (
@@ -64,7 +71,7 @@ const Recipe = () => {
       <div className="recipe_header">
         <div className="recipe_headerLeft">
           <p className="recipe_title">{recipe?.title}</p>
-
+          {/**addtofavorite whent btn is clicked */}
           <div onClick={() => addtoFavorite("recipe")}>
             {favorite.length > 0 ? (
               <p className="recipe_saved">
@@ -159,6 +166,7 @@ const Recipe = () => {
       <div className="recipe_ingredients animate__animated animate__fadeInLeft">
         <p className="ingredient_title">Ingredients:</p>
         <ul>
+          {/** show all the ingredients by mapping */}
           {recipe?.extendedIngredients?.map((ingredient) => {
             return (
               <div className="ingredient_list">
