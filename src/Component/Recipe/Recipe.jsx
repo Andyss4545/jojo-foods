@@ -50,6 +50,11 @@ const Recipe = () => {
     fetchRecipes();
   }, []);
 
+  // add to favorite function
+  let addtoFavorite = (name) => {
+    dispatch({ type: "ADD_TO_FAVORITE", favorite: `${name}` });
+  };
+
   return loading ? (
     <div className="recipe_loading">
       <Loader />
@@ -60,14 +65,18 @@ const Recipe = () => {
         <div className="recipe_headerLeft">
           <p className="recipe_title">{recipe?.title}</p>
 
-          <p
-            onClick={() =>
-              dispatch({ type: "ADD_TO_FAVORITE", favorite: recipe })
-            }
-            className="recipe_save"
-          >
-            <FavoriteIcon /> <span>Save To Favorite</span>
-          </p>
+          <div onClick={() => addtoFavorite("recipe")}>
+            {favorite.length > 0 ? (
+              <p className="recipe_saved">
+                <FavoriteIcon className="saved_icon" />{" "}
+                <span>Saved To Favorite</span>
+              </p>
+            ) : (
+              <p className="recipe_save">
+                <FavoriteIcon /> <span>Save To Favorite</span>
+              </p>
+            )}
+          </div>
           <img
             className="recipe_img animate__animated animate__fadeInDown"
             src={recipe?.image}

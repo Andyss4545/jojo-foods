@@ -18,7 +18,7 @@ const reducer = (state, action) => {
              } else {
                return {
                     ...state,
-                    favorite: action.favorite
+                    favorite: [...state.favorite, action.favorite]
                }
              }
 

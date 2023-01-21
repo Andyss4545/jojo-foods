@@ -22,6 +22,22 @@
     margin-bottom: 10px;
     margin-left: 5px;
     padding: 5px 0px 5px 2px;
+} 
+
+.recipe_saved{
+    width: 160px;
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    padding: 5px 0px 5px 2px;
+}
+
+
+
+.saved_icon{
+      color: #ED2647 !important;
 }
 
 
