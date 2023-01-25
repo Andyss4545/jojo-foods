@@ -9,7 +9,7 @@ import Loader from "../Loading/Loading";
 import "animate.css";
 import { GlobaStateValue } from "../../Global-State/StateProvider";
 
-const key = `ae154f11a0704b019fda192d726fdd27`;
+const key = `38399b056aab4dfe8ec523c2ae490b76`;
 
 const Recipe = () => {
   const [{ favorite }, dispatch] = GlobaStateValue();
@@ -37,30 +37,42 @@ const Recipe = () => {
         setLoading(false); // after the recipes has shown, loading will be false
         console.log("each recipe", data);
 
-        // const Response = await RecipeService.RecipeList();
-        // const data = await Response.data.hits;
-        // setRecipes(data);
-        // console.log(data);
+        // save favorite to localStorage
+        // localStorage.setItem("ADD_TO_FAVORITE", JSON.stringify(favorite));
       } catch (error) {
         setRecipe(error);
         setLoading(false);
       }
     };
 
-    fetchRecipes();
+    fetchRecipes(); // call the fetchRecipes fucntion
+  }, [favorite]);
+
+  // let addToFavorite = () => {};
+
+  //get the local storage item
+  const getLocalData = () => {
+    const data = localStorage.getItem("ADD_TO_FAVORITE");
+    if (data) {
+      // Parse it back to an object
+      const localData = JSON.parse(data);
+
+      return localData;
+    } else {
+      // otherwise return empty object
+      return [];
+    }
+  };
+
+  useEffect(() => {
+    getLocalData();
   }, []);
 
-  // add to favorite function
+  //  assign getLcalData to a new variable
+  const localData = getLocalData();
 
-  let addtoFavorite = (name) => {
-    dispatch({
-      type: "ADD_TO_FAVORITE",
-      favorite: window.localStorage.setItem(
-        "ADD_TO_FAVORITE",
-        JSON.stringify(`${name}`)
-      ),
-    });
-  };
+  // find the id of the saved item
+  const isSaved = localData.find((item) => item.id === recipe.id);
 
   return loading ? (
     <div className="recipe_loading">
@@ -72,8 +84,23 @@ const Recipe = () => {
         <div className="recipe_headerLeft">
           <p className="recipe_title">{recipe?.title}</p>
           {/**addtofavorite whent btn is clicked */}
-          <div onClick={() => addtoFavorite("recipe")}>
-            {favorite.length > 0 ? (
+          <div
+            onClick={() => {
+              // Save the recipe to the favorite state
+              dispatch({ type: "ADD_TO_FAVORITE", favorite: recipe });
+              if (!isSaved) {
+                // Add the new recipe to the localData array
+                localData.push(recipe);
+
+                // Save the updated localData array to local storage
+                localStorage.setItem(
+                  "ADD_TO_FAVORITE",
+                  JSON.stringify(localData)
+                );
+              }
+            }}
+          >
+            {isSaved ? (
               <p className="recipe_saved">
                 <FavoriteIcon className="saved_icon" />{" "}
                 <span>Saved To Favorite</span>

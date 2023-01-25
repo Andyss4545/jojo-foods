@@ -4,6 +4,7 @@ import Header from './Component/Header/Header';
 import Home from './Component/Home/Home';
 import Recipe from './Component/Recipe/Recipe';
 import Searched from './Component/Search/Searched';
+import Favorites from './Component/Favorites/Favorites';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                   <Route path='/' exact element={<Home/>}/>
                   <Route path='/recipe/:nameid' element={<Recipe/>} />
                   <Route path='/searched/:searchTerm' element={<Searched/>} />
+                  <Route path='/recipe/favorite' element={<Favorites/>} />
               </Routes>
           </Router>
         </div>
