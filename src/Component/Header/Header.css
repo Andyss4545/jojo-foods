@@ -4,10 +4,11 @@
       background-color: #fff;
       box-shadow:  2px 3px 20px #bebebe,
       -20px -20px 60px #ffffff; 
-      /* position: relative;  */
-      /* z-index: 999;  */
-      /* position: sticky; 
-      top: 0;  */
+      /* position: fixed;
+      top: 0;
+      z-index: 2; */
+      
+      /* pointer-events: none; */
 }
 
 .header_container{
