@@ -75,7 +75,10 @@ const Header = () => {
               onClick={() => setSearchBar(!searchbar)}
               className="header_search"
             />
-            <FavoriteIcon className="header_favorite" />
+            <Link to={"recipe/favorite"}>
+              <FavoriteIcon className="header_favorite" />
+            </Link>
+
             {/* <PersonIcon className="header_person" /> */}
 
             <div

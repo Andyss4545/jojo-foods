@@ -4,7 +4,7 @@ import Loader from "../Loading/Loading";
 import { useParams, Link } from "react-router-dom";
 import Search from "./Search";
 
-const key = `38399b056aab4dfe8ec523c2ae490b76`;
+const key = `ae154f11a0704b019fda192d726fdd27`;
 
 const Searched = () => {
   let { searchTerm } = useParams();

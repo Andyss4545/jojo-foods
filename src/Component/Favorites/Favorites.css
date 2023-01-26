@@ -136,3 +136,31 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+.favorites_clear{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.favorites_clear > button{
+     border: 1px solid #ED2647;
+     border-radius: 5px;
+     background-color: #fff;
+     padding: 5px 10px;
+     cursor: pointer;
+}
+
+.favorite_hide{
+    display: none;
+}
+
+
+@media  screen and (min-width:1190px) {
+    .favorites_container{
+        width: 85%;
+        margin: 0 auto;
+    }
+}
