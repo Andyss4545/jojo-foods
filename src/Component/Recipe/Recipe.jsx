@@ -9,7 +9,7 @@ import Loader from "../Loading/Loading";
 import "animate.css";
 import { GlobaStateValue } from "../../Global-State/StateProvider";
 
-const key = `ae154f11a0704b019fda192d726fdd27`;
+const key = `b34c6b1639d041499677218848255a22`;
 
 const Recipe = () => {
   const [{ favorite }, dispatch] = GlobaStateValue();

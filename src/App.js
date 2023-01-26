@@ -4,12 +4,13 @@ import Header from './Component/Header/Header';
 import Home from './Component/Home/Home';
 import Recipe from './Component/Recipe/Recipe';
 import Searched from './Component/Search/Searched';
-import Favorites from './Component/Favorites/Favorites';
+import Footer from './Footer/Footer';
+import Favorites from './Component/Favorites/Favorites'
 
 
 function App() {
   return (
-        <div className="app">
+        <div className="app"> 
           <Router>
               <Header/>
               <Routes>
@@ -18,6 +19,7 @@ function App() {
                   <Route path='/searched/:searchTerm' element={<Searched/>} />
                   <Route path='/recipe/favorite' element={<Favorites/>} />
               </Routes>
+              <Footer/>
           </Router>
         </div>
   );

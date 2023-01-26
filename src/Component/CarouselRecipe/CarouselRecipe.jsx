@@ -8,7 +8,7 @@ import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
 import { Link } from "react-router-dom";
 
-const key = `ae154f11a0704b019fda192d726fdd27`;
+const key = `b34c6b1639d041499677218848255a22`;
 
 const CarouselRecipe = (props) => {
   // set carousel to empty objects with useState
