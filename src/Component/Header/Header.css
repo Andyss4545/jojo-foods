@@ -88,6 +88,10 @@
      margin-right: 5px;
 }
 
+.header_icons > a {
+      color: black;
+}
+
 .header_search{
       padding-right: 5px;
       cursor: pointer;
@@ -98,9 +102,25 @@
       padding-right: 5px;
       cursor: pointer;
       font-size: 28px !important;
+      color: #ED2647 !important;
 }
-.header_favorite:hover{
-      color: #ED2647; 
+
+
+.header_favoriteActive{
+    color: black;
+}
+
+.header_count{
+      background-color: green;
+      border-radius: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      padding: 2px;
 }
 
 .header_person{
@@ -219,5 +239,10 @@
             right: 90px;
       } 
 
+      .header_count{
+            top: -10px;
+            right:0px;
+            padding: 2px;
+      }
      
 }

@@ -4,6 +4,11 @@
      padding-top: 30px;
 }
 
+.searched_page{
+    position: relative;
+    z-index: 1;
+}
+
 
 .searched_recipes {
     display: flex;

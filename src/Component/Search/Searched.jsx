@@ -38,7 +38,9 @@ const Searched = () => {
 
   return (
     <div className="searched">
-      <Search />
+      <div className="searched_page">
+        <Search />
+      </div>
       <div className="searched_recipes">
         {loading ? (
           <div className="searched_load">

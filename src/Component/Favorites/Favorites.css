@@ -153,6 +153,10 @@
      cursor: pointer;
 }
 
+.favorites_clear > button:hover{
+    background-color:#ED2647;
+}
+
 .favorite_hide{
     display: none;
 }

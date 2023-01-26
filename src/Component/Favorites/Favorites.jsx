@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 import "../Favorites/Favorites.css";
 import AddIcon from "@mui/icons-material/Add";
 import { Link } from "react-router-dom";
-import { GlobaStateValue } from "../../Global-State/StateProvider";
-import Loader from "../Loading/Loading";
-const Favorites = () => {
-  // const [{ favorite }] = GlobaStateValue();
 
+const Favorites = () => {
   // set savedItems
   const [savedItems, setSavedItems] = useState([]);
 

@@ -5,7 +5,6 @@ import jojofood from "../../Assets/jojofoodslogo.png";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import PersonIcon from "@mui/icons-material/Person";
 import { Close } from "@mui/icons-material";
 import Search from "../Search/Search";
 import "animate.css";
@@ -13,6 +12,8 @@ import "animate.css";
 const Header = () => {
   // set mobile nav to false
   const [navbar, setNavbar] = useState(false);
+
+  const savedItems = JSON.parse(localStorage.getItem("ADD_TO_FAVORITE"));
 
   // set searchbar to false
 
@@ -76,10 +77,15 @@ const Header = () => {
               className="header_search"
             />
             <Link to={"recipe/favorite"}>
-              <FavoriteIcon className="header_favorite" />
+              {savedItems ? (
+                <>
+                  <FavoriteIcon className="header_favorite" />
+                  <p className="header_count">{savedItems.length}</p>
+                </>
+              ) : (
+                <FavoriteIcon className="header_favoriteActive" />
+              )}
             </Link>
-
-            {/* <PersonIcon className="header_person" /> */}
 
             <div
               className={
