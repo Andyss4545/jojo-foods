@@ -19,10 +19,9 @@ function App() {
                   <Route path='/searched/:searchTerm' element={<Searched/>} />
                   <Route path='/recipe/favorite' element={<Favorites/>} />
               </Routes>
-              <div className='footer_footer'>
-                <Footer/>
-              </div>
-              
+              <div className='app_footer'>
+                     <Footer/>
+              </div> 
           </Router>
         </div>
   );

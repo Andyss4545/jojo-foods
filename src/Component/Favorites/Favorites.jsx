@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../Favorites/Favorites.css";
 import AddIcon from "@mui/icons-material/Add";
 import { Link } from "react-router-dom";
+import Footer from "../../Footer/Footer";
 
 const Favorites = () => {
   // set savedItems
@@ -65,6 +66,10 @@ const Favorites = () => {
           <button className="favorite_hide">clear all</button>
         )}
       </div>
+      {/* 
+      <div clasName="favorites_footer">
+        <Footer />
+      </div> */}
     </div>
   );
 };

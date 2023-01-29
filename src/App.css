@@ -1,11 +1,9 @@
 *{
-     margin-bottom: 0px;
+     /* margin: 0; */
 }
 
-/* .app{
-    margin-bottom: 0px;
-} */
+ .app_footer{
+     width: 100%;
+     overflow: hidden;
+} 
 
-/* .footer_footer{
-    margin-bottom: 0px;
-} */

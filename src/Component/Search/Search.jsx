@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../Search/Search.css";
 import { useNavigate } from "react-router-dom";
+import Footer from "../../Footer/Footer";
 
 const Search = () => {
   const navigate = useNavigate();

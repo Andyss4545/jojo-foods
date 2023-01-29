@@ -2,17 +2,26 @@
     margin-bottom: 0px;
 }
 
+.favorites_footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-bottom: auto;
+    margin-left: 40px;
+}
+
 .favorites > p{
      text-align: center;
      background-color: #ED2647;
-     height: 55px;
+     height: 65px;
      padding-top: 20px;
      color: white;
      font-size: 22px;
      font-weight: 400;
 }
 .favorites_items{
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;

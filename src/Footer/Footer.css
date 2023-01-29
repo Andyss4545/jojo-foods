@@ -1,15 +1,18 @@
 .footer{
-     background-color: rgb(24, 22, 22);
-     margin-bottom: 0px;
+    background-color: #181616;
+    height: 125px;
+    margin-top: 68px;
 }
 
 .footer_content{
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
+      /* justify-content: space-between; */
 }
 
 .footer_menu > ul{
     display: flex;
+    margin-right: 10px;
 }
 
 .footer_menu > ul > li {
@@ -39,4 +42,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media  screen and (max-width:414px) {
+    .footer_content{
+       width: 80%;
+       margin: 0 auto;
+       /* margin-right: 60px;
+       margin-left: 60px; */
+  }
+
+  .footer_menu > ul{
+    margin-left: 0px;
+  }
+
+  .footer_logo > img{
+    height: 85px;
+    width: 140px;
+}
 }
