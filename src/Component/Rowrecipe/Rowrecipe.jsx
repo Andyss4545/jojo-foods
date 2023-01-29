@@ -3,7 +3,7 @@ import "../../Component/Rowrecipe/Rowrecipe.css";
 import { Link } from "react-router-dom";
 import Loader from "../Loading/Loading";
 
-const key = `b34c6b1639d041499677218848255a22`;
+const key = `ae154f11a0704b019fda192d726fdd27`;
 
 const Rowrecipe = () => {
   // set recipes to an empty objects of arrays

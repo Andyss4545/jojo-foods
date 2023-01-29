@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../CarouselRecipe/CarouselRecipe.css";
-// import Carousel from "react-material-ui-carousel";
-import { Paper, Button, Grid } from "@mui/material";
-import RecipeService from "../../Service/recipeService";
-import CarouselItem from "./CarouselItem";
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
 import { Link } from "react-router-dom";
 
-const key = `b34c6b1639d041499677218848255a22`;
+const key = `ae154f11a0704b019fda192d726fdd27`;
 
 const CarouselRecipe = (props) => {
   // set carousel to empty objects with useState
@@ -39,12 +35,13 @@ const CarouselRecipe = (props) => {
       slidesToSlide: 3, // optional, default to 1.
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 500 },
       items: 2,
       slidesToSlide: 2, // optional, default to 1.
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 500, min: 0 },
+      // default size { max: 464, min: 0 }
       items: 1,
       slidesToSlide: 1, // optional, default to 1.
     },

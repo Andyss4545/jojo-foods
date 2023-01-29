@@ -1,8 +1,10 @@
 
-
-.recipe_header{
-    margin-top: 40px;
+.recipe_page{
+    padding-top: 20px;
 }
+/* .recipe_header{
+    margin-top: 100px;
+} */
 
 .recipe_title{
     font-weight: 300;
@@ -56,6 +58,7 @@
      flex-wrap: wrap;
      width: 100%;
      margin: 0 auto;
+     padding-top: 10px;
 }
 
 .recipe_infoItem{
@@ -118,7 +121,7 @@
 }
 
 .recipe_ingredients{
-    margin-top: 35px;
+    margin-top: 45px;
     margin-left: 10px;
 }
 

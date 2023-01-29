@@ -1,7 +1,7 @@
 .footer{
     background-color: #181616;
     height: 125px;
-    margin-top: 68px;
+    margin-top: 167px;
 }
 
 .footer_content{
@@ -45,20 +45,19 @@
 }
 
 
-@media  screen and (max-width:414px) {
+@media screen and (max-width:500px) {
     .footer_content{
        width: 80%;
        margin: 0 auto;
-       /* margin-right: 60px;
-       margin-left: 60px; */
   }
 
-  .footer_menu > ul{
-    margin-left: 0px;
-  }
 
   .footer_logo > img{
-    height: 85px;
     width: 140px;
-}
+    padding-left: 30px;
+  }
+
+  .footer_menu {
+    margin-right: 12px;
+  }
 }

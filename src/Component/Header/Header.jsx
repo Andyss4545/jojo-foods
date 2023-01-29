@@ -51,13 +51,13 @@ const Header = () => {
           >
             <ul>
               <li>
-                <Link>Home</Link>
+                <Link to={"/"}>Home</Link>
               </li>
               <li>
-                <Link>Recipes</Link>
+                <Link to={"/searched/pasta"}>Recipes</Link>
               </li>
               <li>
-                <Link>Meals</Link>
+                <Link to={"/searched/meals"}>Meals</Link>
               </li>
               <li>
                 <Link>Videos</Link>

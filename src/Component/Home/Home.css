@@ -7,7 +7,9 @@
 }
 
 .home_search{
-     margin-top: 70px;
+    display: block;
+     padding-top: 40px;
+     
 }
 
 .home_row{
