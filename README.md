@@ -6,12 +6,14 @@ This project was created using ReactJS and JavaScript.
 
 ####Desktop Version
 
-![jojo-foods web app_ (1)](https://user-images.githubusercontent.com/34424896/216034580-e99d2fa0-ca69-4323-b58f-41cb5d8df2fd.png)
+![jojo-food-desktop](https://user-images.githubusercontent.com/34424896/216043004-81175ed9-89db-47f6-8c94-29ebdf1e1ddf.png)
+
 
 
 #### Mobile Version
 
-![jojo-foods web app_(iPhone XR)](https://user-images.githubusercontent.com/34424896/216034640-126bd325-4fb3-45a3-8e2a-0edb5a545d29.png)
+
+![jojo-mobile-mobile](https://user-images.githubusercontent.com/34424896/216043118-ecccc1c4-f8f5-48e6-bdd3-001cc25ec00e.png)
 
 
 ## Application Address
