@@ -29,6 +29,6 @@ It is a single page application with amazing features
 
 ## Application Address
 
-[Jojo Food Application](https://jojo-foods.web.app/).
+Visit the application [Jojo Food Application](https://jojo-foods.web.app/).
 
 
