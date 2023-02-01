@@ -13,7 +13,8 @@ This project was created using ReactJS and JavaScript.
 #### Mobile Version
 
 
-![jojo-mobile-mobile](https://user-images.githubusercontent.com/34424896/216043118-ecccc1c4-f8f5-48e6-bdd3-001cc25ec00e.png)
+![jojo-mobile-mobile](https://user-images.githubusercontent.com/34424896/216043566-b0cf3baf-ddae-4ae5-b286-990810605dee.png)
+
 
 
 ## Application Address
