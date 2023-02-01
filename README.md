@@ -1,6 +1,16 @@
 # JOJO FOODS RECIPE APPLICATION
 
 This project was created using ReactJS and JavaScript.
+It is a single page application with amazing features
+
+#### Features Present in the Application
+
+* Search Recipes functionality
+* Dynamically pulling recipes from spoonacular api
+* Responsive Mobile Navigation
+* View Recipe Page functionality
+* Add recipe to favorites and store to browser local storage
+* dispatch recipe action
 
 ## Application Images
 
@@ -19,6 +29,6 @@ This project was created using ReactJS and JavaScript.
 
 ## Application Address
 
-https://jojo-foods.web.app/
+[Jojo Food Application] (https://jojo-foods.web.app/)
 
 
